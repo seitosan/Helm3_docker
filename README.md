@@ -7,10 +7,10 @@ docker to running Helm3
 ```bash
 docker run  -it helm3
 ```
-When you run  this command, this must print the help from kubectl. If you wish used custom variable you can used like this : 
+When you run  this command, this must print the help from kubectl. If you wish used custom variable you can used like this (you need to create a new folder helm3 on your home directory): 
 
 ```bash
-docker run  -it helm3 version
+docker run -v ~/helm3:/root/  -v ~/.kube/config:/root/.kube/config -it helm3 version
 ```
 this must print the version  like : 
 
